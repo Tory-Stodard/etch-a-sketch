@@ -3,18 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Etch-a-Sketch</title>
+    <title>Pixel Sketch</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="grid-container"></div>
-    <button onclick="changeGrid()">Change Grid</button>
-    <button onclick="clearGrid()">Clear Grid</button>
-    <button onclick="changeColor('rainbow')">Rainbow</button>
-    <button onclick="changeColor('black')">Black</button>
-    <button onclick="changeColor('white')">Eraser</button>
-    <button onclick="showHideGrid()">Show/Hide Grid</button>
-    <input type="color" id="color-picker" />
+    <header>
+      <h1 class="center-text">Pixel Sketch</h1>
+    </header>
+    <main>
+      <div class="buttons-left">
+        <button onclick="changeGrid()">Change Grid</button>
+        <button onclick="clearGrid()">Clear Grid</button>
+        <button onclick="showHideGrid()">Show/Hide Grid</button>
+      </div>
+      <div class="content-middle">
+        <div class="color-picker-wrapper">
+          <label for="color-picker">Change Color</label>
+          <input type="color" id="color-picker" />
+        </div>
+        <div class="grid-container"></div>
+      </div>
+      <div class="buttons-right">
+        <button onclick="changeColor('rainbow')">Rainbow</button>
+        <button onclick="changeColor('black')">Black</button>
+        <button onclick="changeColor('white')">Eraser</button>
+      </div>
+    </main>
+    <footer>
+      <p class="center-text">&copy; 2023 Tory Stodard</p>
+    </footer>
     <script src="main.js"></script>
   </body>
 </html>
