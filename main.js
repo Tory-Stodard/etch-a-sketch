@@ -25,4 +25,9 @@ function changeGrid(promptStr = 'Enter a grid size between 2 and 100.') {
   }
 }
 
+function clearGrid() {
+  const gridCells = document.querySelectorAll('.grid-cell');
+  gridCells.forEach((element) => (element.style.backgroundColor = 'white'));
+}
+
 createGrid(16);
