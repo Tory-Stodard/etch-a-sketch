@@ -1,4 +1,5 @@
 let currentColor = 'black';
+let showGrid = false;
 
 createGrid(16);
 
@@ -46,4 +47,19 @@ function changeColor(color) {
 
 function randomColor() {
   return Math.floor(Math.random() * 255);
+}
+
+function showHideGrid() {
+  const gridCells = document.querySelectorAll('.grid-cell');
+  showGrid = !showGrid;
+  switch (showGrid) {
+    case true:
+      gridCells.forEach(
+        (element) => (element.style.border = '1px solid rgb(30,30,30)')
+      );
+      break;
+    case false:
+      gridCells.forEach((element) => (element.style.border = 'none'));
+      break;
+  }
 }
