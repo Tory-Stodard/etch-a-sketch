@@ -1,8 +1,8 @@
 .grid-container {
-  border: 1px solid rgb(30, 30, 30);
-  display: grid;
   width: 500px;
   height: 500px;
+  border: 1px solid rgb(30, 30, 30);
+  display: grid;
 }
 
 .grid-cell {
