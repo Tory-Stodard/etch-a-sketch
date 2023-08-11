@@ -1,4 +1,7 @@
-let currentColor = 'black';
+const colorPicker = document.querySelector('#color-picker');
+colorPicker.addEventListener('input', (e) => (currentColor = e.target.value));
+
+let currentColor = colorPicker.value;
 let showGrid = false;
 
 createGrid(16);
@@ -20,6 +23,14 @@ function createGrid(gridSize) {
       }
     });
     gridContainer.appendChild(gridCell);
+  }
+  const gridCells = document.querySelectorAll('.grid-cell');
+  if (showGrid) {
+    gridCells.forEach(
+      (element) => (element.style.border = '1px solid rgb(30,30,30)')
+    );
+  } else {
+    gridCells.forEach((element) => (element.style.border = 'none'));
   }
 }
 
