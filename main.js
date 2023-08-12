@@ -4,6 +4,10 @@ colorPicker.addEventListener('input', (e) => (currentColor = e.target.value));
 let currentColor = colorPicker.value;
 let showGrid = false;
 
+let mouseDown = false;
+document.body.onmousedown = () => (mouseDown = true);
+document.body.onmouseup = () => (mouseDown = false);
+
 createGrid(16);
 
 function createGrid(gridSize) {
@@ -12,16 +16,8 @@ function createGrid(gridSize) {
   for (let i = 0; i < gridSize * gridSize; i++) {
     const gridCell = document.createElement('div');
     gridCell.className = 'grid-cell';
-    gridCell.addEventListener('mouseover', () => {
-      if (currentColor === 'rainbow') {
-        const r = randomColor();
-        const g = randomColor();
-        const b = randomColor();
-        gridCell.style.backgroundColor = `rgb(${r},${g},${b})`;
-      } else {
-        gridCell.style.backgroundColor = currentColor;
-      }
-    });
+    gridCell.addEventListener('mouseover', draw);
+    gridCell.addEventListener('mousedown', draw);
     gridContainer.appendChild(gridCell);
   }
   const gridCells = document.querySelectorAll('.grid-cell');
@@ -72,5 +68,18 @@ function showHideGrid() {
     case false:
       gridCells.forEach((element) => (element.style.border = 'none'));
       break;
+  }
+}
+
+function draw(e) {
+  if (e.type === 'mouseover' && mouseDown === false) {
+    return;
+  } else if (currentColor === 'rainbow') {
+    const r = randomColor();
+    const g = randomColor();
+    const b = randomColor();
+    e.target.style.backgroundColor = `rgb(${r},${g},${b})`;
+  } else {
+    e.target.style.backgroundColor = currentColor;
   }
 }
