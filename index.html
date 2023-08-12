@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pixel Sketch</title>
+    <script
+      src="https://kit.fontawesome.com/3c89445e0c.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -11,22 +15,21 @@
       <h1 class="center-text">Pixel Sketch</h1>
     </header>
     <main>
-      <div class="buttons-left">
+      <div class="buttons">
+        <label for="color-picker">Color Picker</label>
+        <input type="color" id="color-picker" />
+        <button onclick="changeColor('rainbow')">Rainbow</button>
+        <button onclick="changeColor('white')">Eraser</button>
         <button onclick="changeGrid()">Change Grid</button>
         <button onclick="clearGrid()">Clear Grid</button>
         <button onclick="showHideGrid()">Show/Hide Grid</button>
       </div>
-      <div class="content-middle">
-        <div class="color-picker-wrapper">
-          <label for="color-picker">Change Color</label>
-          <input type="color" id="color-picker" />
-        </div>
-        <div class="grid-container"></div>
-      </div>
-      <div class="buttons-right">
-        <button onclick="changeColor('rainbow')">Rainbow</button>
-        <button onclick="changeColor('black')">Black</button>
-        <button onclick="changeColor('white')">Eraser</button>
+      <div class="grid-container"></div>
+      <div class="github-link">
+        <p>View on Github</p>
+        <a href="https://github.com/Tory-Stodard/etch-a-sketch" target="_blank"
+          ><i class="fa-brands fa-square-github fa-2xl"></i
+        ></a>
       </div>
     </main>
     <footer>

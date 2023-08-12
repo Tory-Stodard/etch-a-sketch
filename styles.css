@@ -19,25 +19,24 @@ header {
 
 main {
   height: 100dvh;
-  display: flex;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
   align-items: center;
 }
 
-.buttons-left,
-.buttons-right,
-.content-middle {
+.buttons {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 
-.color-picker-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
+input {
+  width: 50px;
+  height: 50px;
+  border: none;
+  background-color: white;
 }
 
 .grid-container {
@@ -50,6 +49,17 @@ main {
 button {
   width: 150px;
   padding: 0.5rem 1.5rem;
+}
+
+.github-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+a {
+  color: black;
 }
 
 footer {
