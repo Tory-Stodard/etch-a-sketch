@@ -1,3 +1,9 @@
+:root {
+  --color1: #cfd2cf;
+  --color2: #a2b5bb;
+  --color3: #eb1d36;
+}
+
 *,
 *::before,
 *::after {
@@ -17,6 +23,13 @@ header {
   right: 0;
 }
 
+h1 {
+  padding: 1rem 0;
+  color: var(--color3);
+  background-color: var(--color2);
+  font-weight: 900;
+}
+
 main {
   height: 100dvh;
   display: grid;
@@ -32,6 +45,10 @@ main {
   gap: 0.5rem;
 }
 
+/* label {
+  color: var(--background-color1);
+} */
+
 input {
   width: 50px;
   height: 50px;
@@ -39,16 +56,31 @@ input {
   background-color: white;
 }
 
+input:hover {
+  cursor: pointer;
+}
+
 .grid-container {
   width: 500px;
   height: 500px;
-  border: 2px solid rgb(30, 30, 30);
+  border: 2px solid black;
   display: grid;
 }
 
 button {
   width: 150px;
-  padding: 0.5rem 1.5rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  font-weight: bold;
+  border-radius: 4px;
+  background-color: var(--color2);
+  border: 2px solid transparent;
+  transition-duration: 0.15s;
+}
+
+button:hover {
+  cursor: pointer;
+  border: 2px solid black;
 }
 
 .github-link {
@@ -67,4 +99,9 @@ footer {
   bottom: 0;
   left: 0;
   right: 0;
+  font-weight: bold;
+  padding: 0.5rem 0;
+  background-color: var(--color2);
+  color: var(--color3);
+  font-weight: 900;
 }

@@ -19,15 +19,14 @@ function createGrid(gridSize) {
   for (let i = 0; i < gridSize * gridSize; i++) {
     const gridCell = document.createElement("div");
     gridCell.className = "grid-cell";
+    gridCell.style.backgroundColor = "#FFFFFF";
     gridCell.addEventListener("mouseover", draw);
     gridCell.addEventListener("mousedown", draw);
     gridContainer.appendChild(gridCell);
   }
   const gridCells = document.querySelectorAll(".grid-cell");
   if (showGrid) {
-    gridCells.forEach(
-      (element) => (element.style.border = "1px solid rgb(30,30,30)")
-    );
+    gridCells.forEach((element) => (element.style.border = "1px solid black"));
   } else {
     gridCells.forEach((element) => (element.style.border = "none"));
   }
@@ -65,7 +64,7 @@ function showHideGrid() {
   switch (showGrid) {
     case true:
       gridCells.forEach(
-        (element) => (element.style.border = "1px solid rgb(30,30,30)")
+        (element) => (element.style.border = "1px solid black")
       );
       break;
     case false:
