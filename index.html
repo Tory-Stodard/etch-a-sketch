@@ -18,11 +18,13 @@
       <div class="buttons">
         <label for="color-picker">Color Picker</label>
         <input type="color" id="color-picker" value="#eb1d36" />
-        <button onclick="changeColor('rainbow')">Rainbow</button>
-        <button onclick="changeColor('white')">Eraser</button>
+        <button onclick="rainbow()" class="rainbow-btn">Rainbow</button>
+        <button onclick="erase()" class="eraser-btn">Eraser</button>
         <button onclick="changeGrid()">Grid Size</button>
         <button onclick="clearGrid()">Clear</button>
-        <button onclick="showHideGrid()">Show Grid</button>
+        <button onclick="showHideGrid()" class="show-hide-btn">
+          Show Grid
+        </button>
       </div>
       <div class="grid-container"></div>
       <div class="github-link">
