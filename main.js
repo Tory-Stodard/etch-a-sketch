@@ -73,6 +73,7 @@ function erase() {
     case false:
       eraserBtn.style.backgroundColor = "var(--color2)";
       eraserBtn.style.border = "2px solid transparent";
+      break;
   }
 }
 

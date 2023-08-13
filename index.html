@@ -11,32 +11,36 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header>
-      <h1 class="center-text">Pixel Sketch</h1>
-    </header>
-    <main>
-      <div class="buttons">
-        <label for="color-picker">Color Picker</label>
-        <input type="color" id="color-picker" value="#eb1d36" />
-        <button onclick="rainbow()" class="rainbow-btn">Rainbow</button>
-        <button onclick="erase()" class="eraser-btn">Eraser</button>
-        <button onclick="changeGrid()">Grid Size</button>
-        <button onclick="clearGrid()">Clear</button>
-        <button onclick="showHideGrid()" class="show-hide-btn">
-          Show Grid
-        </button>
-      </div>
-      <div class="grid-container"></div>
-      <div class="github-link">
-        <p>View on Github</p>
-        <a href="https://github.com/Tory-Stodard/etch-a-sketch" target="_blank"
-          ><i class="fa-brands fa-square-github fa-2xl"></i
-        ></a>
-      </div>
-    </main>
-    <footer>
-      <p class="center-text">&copy; 2023 Tory Stodard</p>
-    </footer>
+    <div class="wrapper">
+      <header>
+        <h1 class="center-text">Pixel Sketch</h1>
+      </header>
+      <main>
+        <div class="buttons">
+          <label for="color-picker">Color Picker</label>
+          <input type="color" id="color-picker" value="#eb1d36" />
+          <button onclick="rainbow()" class="rainbow-btn">Rainbow</button>
+          <button onclick="erase()" class="eraser-btn">Eraser</button>
+          <button onclick="changeGrid()">Grid Size</button>
+          <button onclick="clearGrid()">Clear</button>
+          <button onclick="showHideGrid()" class="show-hide-btn">
+            Show Grid
+          </button>
+        </div>
+        <div class="grid-container"></div>
+        <div class="github-link">
+          <p>View on Github</p>
+          <a
+            href="https://github.com/Tory-Stodard/etch-a-sketch"
+            target="_blank"
+            ><i class="fa-brands fa-square-github fa-2xl"></i
+          ></a>
+        </div>
+      </main>
+      <footer>
+        <p class="center-text">&copy; 2023 Tory Stodard</p>
+      </footer>
+    </div>
     <script src="main.js"></script>
   </body>
 </html>

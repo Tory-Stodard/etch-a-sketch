@@ -16,11 +16,10 @@
   text-align: center;
 }
 
-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
 }
 
 h1 {
@@ -35,6 +34,7 @@ main {
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
   align-items: center;
+  flex: 1;
 }
 
 .buttons {
@@ -43,10 +43,6 @@ main {
   align-items: center;
   gap: 0.5rem;
 }
-
-/* label {
-  color: var(--background-color1);
-} */
 
 input {
   width: 50px;
@@ -77,11 +73,6 @@ button {
   transition-duration: 0.15s;
 }
 
-button:hover {
-  cursor: pointer;
-  border: 2px solid black;
-}
-
 button:active {
   background-color: white;
   border: 2px solid black;
@@ -99,12 +90,55 @@ a {
 }
 
 footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
   font-weight: bold;
   padding: 0.5rem 0;
   background-color: var(--color2);
   font-weight: 900;
+}
+
+@media (max-width: 900px), (max-height: 650px) {
+  main {
+    height: auto;
+    grid-template-columns: 1fr;
+  }
+
+  header,
+  .buttons,
+  .grid-container,
+  a {
+    margin-bottom: 1.5rem;
+  }
+
+  .grid-container {
+    grid-row: 1;
+  }
+
+  .buttons {
+    grid-row: 2;
+  }
+
+  .github-link {
+    grid-row: 3;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-container {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+@media (max-width: 370px) {
+  .grid-container {
+    width: 95dvw;
+    height: 95dvw;
+  }
+}
+
+@media (hover: hover) {
+  button:hover {
+    cursor: pointer !important;
+    border: 2px solid black !important;
+  }
 }
